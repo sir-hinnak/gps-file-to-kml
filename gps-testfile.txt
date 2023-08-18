@@ -1,0 +1,5 @@
+Name;Lat;Long;City;Country
+Brandenburger Tor;52.5162778;13.3751292;Berlin;Deutschland
+Schloss Neuschwanstein;47.55771877787409;10.748931361606683;Schwangau;Deutschland
+Frauenkirche;48.138781324308134;11.574258398721858;München;Deutschland
+Dresdner Zwinger;51.05309058986194;13.733926597515369;Dresden;Deutschland

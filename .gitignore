@@ -1,0 +1,5 @@
+*build
+*dist
+*gps-venv
+/app.spec
+/gps-testfile.txt.kml

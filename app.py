@@ -21,23 +21,23 @@ class MyWindow(QMainWindow):
         self.text_edit = QTextEdit()
         self.layout.addWidget(self.text_edit, 0, 0, 1, 2)
 
-        self.load_button = QPushButton("Datei öffnen")
+        self.load_button = QPushButton("Open file")
         self.load_button.clicked.connect(self.loadFile)
         self.layout.addWidget(self.load_button, 1, 0)
 
         self.separator_input = QTextEdit()
         self.separator_input.setFixedHeight(35)
-        self.separator_input.setPlaceholderText("Separator eingeben")
+        self.separator_input.setPlaceholderText("Enter separator")
         self.layout.addWidget(self.separator_input, 1, 1)
 
-        self.render_button = QPushButton("Tabelle rendern")
+        self.render_button = QPushButton("Render table")
         self.render_button.clicked.connect(self.renderTable)
         self.layout.addWidget(self.render_button, 2, 0, 1, 2)
 
         self.table_widget = QTableWidget()
         self.layout.addWidget(self.table_widget, 3, 0, 1, 2)
 
-        self.settings_group = QGroupBox("Einstellung")
+        self.settings_group = QGroupBox("Settings:")
         self.settings_layout = QVBoxLayout()
 
         self.form_layout = QFormLayout()
@@ -54,20 +54,20 @@ class MyWindow(QMainWindow):
         self.form_layout.addRow(self.longitude_label, self.longitude_combo)
         self.form_layout.addRow(self.name_label, self.name_combo)
 
-        self.single_option = QRadioButton("Als Route generieren")
+        self.single_option = QRadioButton("Generate as route")
         self.form_layout.addRow(self.single_option)
 
         self.settings_layout.addLayout(self.form_layout)
         self.settings_group.setLayout(self.settings_layout)
         self.layout.addWidget(self.settings_group, 4, 0, 1, 2)
 
-        self.custom_button = QPushButton("KML generieren")
+        self.custom_button = QPushButton("Generate KML-File")
         self.custom_button.clicked.connect(self.customCode)
         self.layout.addWidget(self.custom_button, 5, 0, 1, 2)
 
     def loadFile(self):
         options = QFileDialog.Options()
-        file_name, _ = QFileDialog.getOpenFileName(self, "Datei öffnen", "", "Textdateien (*.txt);;Alle Dateien (*)", options=options)
+        file_name, _ = QFileDialog.getOpenFileName(self, "Open file", "", "Textfiles (*.txt);;All files (*)", options=options)
 
         if file_name:
             with open(file_name, "r") as file:
@@ -139,7 +139,7 @@ class MyWindow(QMainWindow):
             f.close()                
 
         else:
-            print("Bitte wählen Sie eine Datei aus!")
+            print("Open a file...")
 
 def main():
     app = QApplication(sys.argv)

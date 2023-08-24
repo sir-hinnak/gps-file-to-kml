@@ -114,9 +114,9 @@ class MyWindow(QMainWindow):
             tmp_name = "None"
 
             if self.single_option.isChecked():
-                print(f"Radio Button wurde geklickt! Route generieren ausgewählt. Dateipfad: {self.selected_file_path}, Latitude: {latitude}, Longitude: {longitude}")
+                print(f"Radio Button wurde geklickt! Route generieren ausgewählt. Dateipfad: {self.selected_file_path}, Latitude: {latitude}, Longitude: {longitude}") #just for testing purpose
             else:
-                print(f"Radio Button wurde geklickt! Route generieren nicht ausgewählt. Dateipfad: {self.selected_file_path}, Latitude: {latitude}, Longitude: {longitude}")
+                print(f"Radio Button wurde geklickt! Route generieren nicht ausgewählt. Dateipfad: {self.selected_file_path}, Latitude: {latitude}, Longitude: {longitude}") #just for testing purpose
 
             df = pd.read_csv(self.selected_file_path, sep=self.separator) 
 
